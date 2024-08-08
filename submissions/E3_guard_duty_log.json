@@ -1,0 +1,128 @@
+[
+  {
+    "AccountId": "158116066049",
+    "Arn": "arn:aws:guardduty:us-east-1:158116066049:detector/84c89709ba6b10ae7fddc85698849695/finding/b0c89717daf5db4f73542625724b55b3",
+    "CreatedAt": "2024-08-07T18:52:44.395Z",
+    "Description": "i-0709c04439945745a is performing SSH brute force attacks against 10.192.10.149. Brute force attacks are used to gain unauthorized access to your instance by guessing the SSH password.",
+    "Id": "b0c89717daf5db4f73542625724b55b3",
+    "Partition": "aws",
+    "Region": "us-east-1",
+    "Resource": {
+      "InstanceDetails": {
+        "AvailabilityZone": "us-east-1b",
+        "IamInstanceProfile": {
+          "Arn": "arn:aws:iam::158116066049:instance-profile/c3-app-InstanceProfileRole-FUegC6QvJ2g9",
+          "Id": "AIPASJUDTWMA3YJTPUITP"
+        },
+        "ImageDescription": "",
+        "ImageId": "ami-01fcf79ce78f46764",
+        "InstanceId": "i-0709c04439945745a",
+        "InstanceState": "running",
+        "InstanceType": "t3.micro",
+        "OutpostArn": null,
+        "LaunchTime": "2024-08-07T18:07:52.000Z",
+        "NetworkInterfaces": [
+          {
+            "Ipv6Addresses": [],
+            "NetworkInterfaceId": "eni-0d42a5aa88208500c",
+            "PrivateDnsName": "ip-10-192-11-205.ec2.internal",
+            "PrivateIpAddress": "10.192.11.205",
+            "PrivateIpAddresses": [
+              {
+                "PrivateDnsName": "ip-10-192-11-205.ec2.internal",
+                "PrivateIpAddress": "10.192.11.205"
+              }
+            ],
+            "PublicDnsName": "ec2-35-173-235-206.compute-1.amazonaws.com",
+            "PublicIp": "35.173.235.206",
+            "SecurityGroups": [
+              {
+                "GroupId": "sg-072591ec69994dd58",
+                "GroupName": "AttackInstanceSG"
+              }
+            ],
+            "SubnetId": "subnet-0780814e0d2717f00",
+            "VpcId": "vpc-05b45d2312d56c94d"
+          }
+        ],
+        "Platform": null,
+        "ProductCodes": [],
+        "Tags": [
+          {
+            "Key": "aws:cloudformation:stack-id",
+            "Value": "arn:aws:cloudformation:us-east-1:158116066049:stack/c3-app/9ae03c20-54e7-11ef-aff9-12fcfd9808a7"
+          },
+          {
+            "Key": "aws:cloudformation:logical-id",
+            "Value": "AttackInstance"
+          },
+          {
+            "Key": "aws:cloudformation:stack-name",
+            "Value": "c3-app"
+          },
+          {
+            "Key": "Name",
+            "Value": "Attack Instance - C3"
+          }
+        ]
+      },
+      "ResourceType": "Instance"
+    },
+    "SchemaVersion": "2.0",
+    "Service": {
+      "Action": {
+        "ActionType": "NETWORK_CONNECTION",
+        "NetworkConnectionAction": {
+          "Blocked": false,
+          "ConnectionDirection": "OUTBOUND",
+          "LocalPortDetails": {
+            "Port": 39070,
+            "PortName": "Unknown"
+          },
+          "Protocol": "TCP",
+          "LocalIpDetails": {
+            "IpAddressV4": "10.192.11.205"
+          },
+          "RemoteIpDetails": {
+            "City": {
+              "CityName": ""
+            },
+            "Country": {
+              "CountryName": null
+            },
+            "GeoLocation": {
+              "Lat": 0,
+              "Lon": 0
+            },
+            "IpAddressV4": "10.192.10.149",
+            "Organization": {
+              "Asn": "0",
+              "AsnOrg": "",
+              "Isp": "",
+              "Org": ""
+            }
+          },
+          "RemotePortDetails": {
+            "Port": 22,
+            "PortName": "SSH"
+          }
+        }
+      },
+      "Archived": false,
+      "Count": 3,
+      "DetectorId": "84c89709ba6b10ae7fddc85698849695",
+      "EventFirstSeen": "2024-08-07T18:47:16.000Z",
+      "EventLastSeen": "2024-08-07T18:58:44.000Z",
+      "ResourceRole": "ACTOR",
+      "ServiceName": "guardduty",
+      "AdditionalInfo": {
+        "Value": "{}",
+        "Type": "default"
+      }
+    },
+    "Severity": 8,
+    "Title": "i-0709c04439945745a is performing SSH brute force attacks against 10.192.10.149.",
+    "Type": "UnauthorizedAccess:EC2/SSHBruteForce",
+    "UpdatedAt": "2024-08-07T19:00:43.216Z"
+  }
+]

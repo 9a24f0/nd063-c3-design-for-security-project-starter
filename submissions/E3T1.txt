@@ -1,0 +1,5 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+GuardDuty finds out that the instance was attacked by brute force aimed at obtaining passwords to SSH services on the EC2 app instance.
+
+# Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+With continuous SSH request to the system, GuardDuty should detect the abnomaly by tracking VPC flow log.

@@ -1,0 +1,7 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+There were so many vulnerabilities related to the stack, to name a fews:
+- EC2 has public IP adrressed. The instance should be placed in private subnet, without public IP.
+- ELB has no deletion prevent, and no logging enabled. Simply enables them to remediate.
+- IAM policy does not follow least priviledge access. IAM Policy should separate access to specific bucket with minimized write access.
+- EC2 attached EBS has no encryption. Simply enables them to remediate.
+- SG allows SSH to EC2. Check ingress rule of SG, remove the allow for SSH.

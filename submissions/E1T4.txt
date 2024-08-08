@@ -1,0 +1,6 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+Instance are placed directly in public subnet are prone to be compromised. We should instead place it in private subnet and use a NAT gateway to help the instance connects with s3.
+# Poor practice 2
+Although the diagram not mention about bucket encryption, not having a master key to manage the data key is also a problem. Since if attackers could access the instance, the data could be retrieved easily.

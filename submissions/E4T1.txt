@@ -1,5 +1,7 @@
-
-
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+- Not allow SSH request by removing inbould rule in SG
+- Turnoff password authentication of the EC2 instance
 
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+- Reduce the privilege of the IAM Policy that the IAM role is attached, i.e only allow to access free recipes bucket.
+- Add MFA protection for API access to free recipes.

@@ -1,13 +1,22 @@
 # Identify tools that will allow you to do the following:
 
 ## Scan infrastructure as code templates
+Terrascan: https://runterrascan.io/
 
 ### Example vulnerability
+- Enable EBS encryption
+- Enable S3 versioning
 
 ##Scan AMI’s or containers for OS vulnerabilities
+Veracode: https://www.veracode.com/security/vulnerability-scanning-tools
 
 ### Example vulnerability
+CVE scan
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
+AWS config: https://aws.amazon.com/config/
 
 ### Example vulnerability
+- EC2 has public IP adrressed
+- ELB has no deletion prevent
+- ELB not enable logging
